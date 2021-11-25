@@ -11,10 +11,9 @@
 
 
 <div style="text-align:center; width: 100%; display: flext; flex-direction: row; flex-wrap: wrap;">
- <img src = "" style="width:45%; height: auto"/>
-  <img src = "" style="width:45%; height: auto"/>
+ <img src = "https://github.com/T1000-Swift-Hail/week-08_HW_UIControls/blob/main/Simulator%20Screen%20Recording%20-%20iPhone%208%20-%202021-11-25%20at%2013.59.37.gif?raw=true" style="width:55%; height: auto"/>
  
  <br/>
  
-   <img src = "" style="width:100%; height: auto"/>
+   <img src = "https://github.com/T1000-Swift-Hail/week-08_HW_UIControls/blob/main/Screen%20Shot%202021-11-25%20at%202.14.01%20PM.png?raw=true" style="width:100%; height: auto"/>
 </div>
