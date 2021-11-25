@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,9 +16,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DNP-dH-8nJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P4r-Bt-tOL" customClass="MoodSelector" customModule="MoodSelectorLab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="734" width="374" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="DhE-ys-D4f"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="showMoodSwings:" destination="BYZ-38-t0r" eventType="valueChanged" id="upo-JT-f4r"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WK4-8v-059">
+                                <rect key="frame" x="20" y="147" width="374" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" name="moodLabel"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="WK4-8v-059" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4CL-jn-Es5"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="P4r-Bt-tOL" secondAttribute="trailing" constant="20" id="5WE-Zp-oqV"/>
+                            <constraint firstAttribute="bottom" secondItem="DNP-dH-8nJ" secondAttribute="bottom" id="Eca-Ug-6Rt"/>
+                            <constraint firstItem="WK4-8v-059" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="103" id="GPc-FZ-n9m"/>
+                            <constraint firstItem="DNP-dH-8nJ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="HZ9-og-W66"/>
+                            <constraint firstItem="DNP-dH-8nJ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="MEz-bJ-W7I"/>
+                            <constraint firstItem="P4r-Bt-tOL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QJ9-ha-W9b"/>
+                            <constraint firstItem="P4r-Bt-tOL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="cvf-jh-sqG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="WK4-8v-059" secondAttribute="trailing" constant="20" id="idM-oq-jMF"/>
+                            <constraint firstItem="DNP-dH-8nJ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="tdl-Jr-vCW"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moodDescLabel" destination="WK4-8v-059" id="Vak-zt-HEk"/>
+                        <outlet property="moodImageView" destination="DNP-dH-8nJ" id="Ljv-Ws-Lko"/>
+                        <outlet property="moodSwingsSelector" destination="P4r-Bt-tOL" id="sWg-8C-jxO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +63,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="moodLabel">
+            <color red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
