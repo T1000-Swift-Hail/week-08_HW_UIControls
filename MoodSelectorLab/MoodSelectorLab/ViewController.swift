@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var moodSelector: MoodSelector!
     
 
-    let moodArray = [ MoodPage(description: "Today I place a bubbles of happiness around me, and nothing negative can get around!", imageName: "happy1") , MoodPage(description: "Don't be sad! you are not alone..!", imageName: "sad1"),MoodPage(description: "Look to the sky!, tand take a long breath!", imageName: "angry1"), MoodPage(description: "Want me to till you a story? close your eyes..", imageName: "sleepy1")]
+    let moodArray = [ MoodPage(description: "Today I place a bubbles of happiness around me, and nothing negative can get around!", imageName: "happy1") , MoodPage(description: "Don't be sad! you are not alone.!", imageName: "sad1"),MoodPage(description: "Look to the sky!, and take a long breath!", imageName: "angry1"), MoodPage(description: "Want me to till you a story? close your eyes!", imageName: "sleepy1")]
     
     
     override func viewDidLoad() {
