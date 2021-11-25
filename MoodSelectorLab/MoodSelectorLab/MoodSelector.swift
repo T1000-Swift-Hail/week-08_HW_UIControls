@@ -18,14 +18,6 @@ enum Mood : String {
 
 
 class MoodSelector: UIControl {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     private let moods : [Mood] = [.happy, .sad, .angry, .sleepy]
     
@@ -68,12 +60,8 @@ class MoodSelector: UIControl {
         super.layoutSubviews()
         
         backView.layer.cornerRadius = backView.bounds.width / 2
-        //print(backView.bounds.width)
-       
+        
     }
-    
- 
-    
     
     private func configureViews(){
         
@@ -87,13 +75,9 @@ class MoodSelector: UIControl {
         
         backView.translatesAutoresizingMaskIntoConstraints = false
         
-        
-        //moodStackView.backgroundColor  = UIColor.blue
         configureButtons()
         
-        
     }
-    
     
     private func configureButtons(){
         
@@ -108,20 +92,18 @@ class MoodSelector: UIControl {
             
             moodStackView.addArrangedSubview(smileyButton)
             
-            smileyButton.heightAnchor.constraint(equalTo: moodStackView.heightAnchor, constant: -50).isActive = true
-            smileyButton.widthAnchor.constraint(equalTo: moodStackView.heightAnchor, constant: -50).isActive = true
+            smileyButton.heightAnchor.constraint(equalTo: moodStackView.heightAnchor, constant: -120).isActive = true
+            smileyButton.widthAnchor.constraint(equalTo: moodStackView.heightAnchor, constant: -120).isActive = true
             smileyButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         }
         
         
-        backView.widthAnchor.constraint(equalTo: moodStackView.subviews.first!.widthAnchor, constant: 10).isActive = true
-        backView.heightAnchor.constraint(equalTo: moodStackView.subviews.first!.heightAnchor, constant: 10).isActive = true
+        backView.widthAnchor.constraint(equalTo: moodStackView.subviews.first!.widthAnchor, constant: 20).isActive = true
+        backView.heightAnchor.constraint(equalTo: moodStackView.subviews.first!.heightAnchor, constant: 20).isActive = true
         backView.centerYAnchor.constraint(equalTo: moodStackView.subviews.first!.centerYAnchor).isActive = true
         backView.centerXAnchor.constraint(equalTo: moodStackView.subviews.first!.centerXAnchor).isActive = true
-
         
     }
-    
     
     private func animateBackView(){
         
@@ -135,8 +117,7 @@ class MoodSelector: UIControl {
     @objc func buttonTapped(_ sender : UIButton){
         
         selectedMoodIndex = moodStackView.subviews.firstIndex(of: sender) ?? 0
-        
         sendActions(for: .valueChanged)
     }
-
+    
 }

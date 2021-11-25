@@ -15,9 +15,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yGu-fl-zff">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X8g-28-m9p" customClass="MoodSelector" customModule="MoodSelectorLab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="660" width="374" height="182"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="182" id="sa3-GZ-YMa"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="moodsChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="yXj-xH-3eg"/>
+                                </connections>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fYf-C5-D6w">
+                                <rect key="frame" x="53" y="285" width="341" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" red="0.17254901959999999" green="0.21960784310000001" blue="0.25882352939999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="fYf-C5-D6w" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="949-Td-hRG"/>
+                            <constraint firstItem="yGu-fl-zff" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ABN-zj-aVB"/>
+                            <constraint firstItem="X8g-28-m9p" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Cdd-cy-g6g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="X8g-28-m9p" secondAttribute="bottom" constant="20" id="CtR-9p-sKr"/>
+                            <constraint firstItem="yGu-fl-zff" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="GyN-YK-Y8G"/>
+                            <constraint firstAttribute="bottom" secondItem="yGu-fl-zff" secondAttribute="bottom" id="cAW-q6-wzU"/>
+                            <constraint firstAttribute="trailing" secondItem="yGu-fl-zff" secondAttribute="trailing" id="mCN-cm-TFs"/>
+                            <constraint firstItem="fYf-C5-D6w" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="241" id="mSn-H1-9Cz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="X8g-28-m9p" secondAttribute="trailing" constant="20" id="oaC-mu-Ztu"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fYf-C5-D6w" secondAttribute="trailing" constant="20" id="zdr-48-PbE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moodSelector" destination="X8g-28-m9p" id="jv2-nA-IEh"/>
+                        <outlet property="pageDescriptionLbl" destination="fYf-C5-D6w" id="NB9-9V-t4M"/>
+                        <outlet property="pageImageShow" destination="yGu-fl-zff" id="6mT-8D-t2d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
