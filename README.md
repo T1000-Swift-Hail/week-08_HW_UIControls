@@ -2,6 +2,8 @@
 
 ## This repository contains the project we created together today. However it is not complete . Open the project , and use the UIControl we created . 
 - Use the MoodSelector UIControl in your storyboard.
+- Add the necessary views & constraints to your story board.
+- Interact with MoodSelector and make sure you respond to the valueChanged action.
 
 
 ## Your applicaiton should look similar to this :
