@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D10D5B15274F64FE00C56609 /* MoodSelectorLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodSelectorLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D10D5B15274F64FE00C56609 /* MoodSelectorHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoodSelectorHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D10D5B18274F64FE00C56609 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D10D5B1A274F64FE00C56609 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D10D5B1C274F64FE00C56609 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		D10D5B16274F64FE00C56609 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D10D5B15274F64FE00C56609 /* MoodSelectorLab.app */,
+				D10D5B15274F64FE00C56609 /* MoodSelectorHW.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -76,9 +76,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		D10D5B14274F64FE00C56609 /* MoodSelectorLab */ = {
+		D10D5B14274F64FE00C56609 /* MoodSelectorHW */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D10D5B29274F650200C56609 /* Build configuration list for PBXNativeTarget "MoodSelectorLab" */;
+			buildConfigurationList = D10D5B29274F650200C56609 /* Build configuration list for PBXNativeTarget "MoodSelectorHW" */;
 			buildPhases = (
 				D10D5B11274F64FE00C56609 /* Sources */,
 				D10D5B12274F64FE00C56609 /* Frameworks */,
@@ -88,9 +88,9 @@
 			);
 			dependencies = (
 			);
-			name = MoodSelectorLab;
+			name = MoodSelectorHW;
 			productName = MoodSelectorLab;
-			productReference = D10D5B15274F64FE00C56609 /* MoodSelectorLab.app */;
+			productReference = D10D5B15274F64FE00C56609 /* MoodSelectorHW.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -108,7 +108,7 @@
 					};
 				};
 			};
-			buildConfigurationList = D10D5B10274F64FE00C56609 /* Build configuration list for PBXProject "MoodSelectorLab" */;
+			buildConfigurationList = D10D5B10274F64FE00C56609 /* Build configuration list for PBXProject "MoodSelectorHW" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -121,7 +121,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D10D5B14274F64FE00C56609 /* MoodSelectorLab */,
+				D10D5B14274F64FE00C56609 /* MoodSelectorHW */,
 			);
 		};
 /* End PBXProject section */
@@ -349,7 +349,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		D10D5B10274F64FE00C56609 /* Build configuration list for PBXProject "MoodSelectorLab" */ = {
+		D10D5B10274F64FE00C56609 /* Build configuration list for PBXProject "MoodSelectorHW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D10D5B27274F650200C56609 /* Debug */,
@@ -358,7 +358,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D10D5B29274F650200C56609 /* Build configuration list for PBXNativeTarget "MoodSelectorLab" */ = {
+		D10D5B29274F650200C56609 /* Build configuration list for PBXNativeTarget "MoodSelectorHW" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D10D5B2A274F650200C56609 /* Debug */,
