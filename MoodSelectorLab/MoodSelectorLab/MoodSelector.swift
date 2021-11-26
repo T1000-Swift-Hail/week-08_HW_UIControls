@@ -15,8 +15,6 @@ enum Mood : String {
     case sleepy
 }
 
-
-
 class MoodSelector: UIControl {
 
     /*
@@ -29,6 +27,7 @@ class MoodSelector: UIControl {
     
     private let moods : [Mood] = [.happy, .sad, .angry, .sleepy]
     
+
     var selectedMoodIndex = 0 {
         didSet {
             animateBackView()
@@ -49,6 +48,7 @@ class MoodSelector: UIControl {
         
         let newView = UIView()
         newView.backgroundColor = UIColor(named: "happy")
+        
         
         return newView
     }()
@@ -106,13 +106,15 @@ class MoodSelector: UIControl {
             smileyButton.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
             
             
+            
             moodStackView.addArrangedSubview(smileyButton)
             
             smileyButton.heightAnchor.constraint(equalTo: moodStackView.heightAnchor, constant: -50).isActive = true
             smileyButton.widthAnchor.constraint(equalTo: moodStackView.heightAnchor, constant: -50).isActive = true
             smileyButton.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
+
         }
-        
+         
         
         backView.widthAnchor.constraint(equalTo: moodStackView.subviews.first!.widthAnchor, constant: 10).isActive = true
         backView.heightAnchor.constraint(equalTo: moodStackView.subviews.first!.heightAnchor, constant: 10).isActive = true
@@ -128,6 +130,7 @@ class MoodSelector: UIControl {
         UIView.animate(withDuration: 0.4, delay: 0, options: [.curveEaseOut], animations: {
             self.backView.transform.tx = self.moodStackView.subviews[self.selectedMoodIndex].frame.origin.x
             self.backView.backgroundColor = UIColor(named:self.moods[self.selectedMoodIndex].rawValue)
+        
         }, completion: nil)
         
     }
@@ -137,6 +140,9 @@ class MoodSelector: UIControl {
         selectedMoodIndex = moodStackView.subviews.firstIndex(of: sender) ?? 0
         
         sendActions(for: .valueChanged)
+        
+        
+        
     }
 
 }
