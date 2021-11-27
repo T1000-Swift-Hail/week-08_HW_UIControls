@@ -8,6 +8,8 @@
 import UIKit
 
 
+
+
 enum Mood : String {
     case happy
     case sad
@@ -18,6 +20,11 @@ enum Mood : String {
 
 
 class MoodSelector: UIControl {
+    
+   
+
+    
+    
 
     /*
     // Only override draw() if you perform custom drawing.

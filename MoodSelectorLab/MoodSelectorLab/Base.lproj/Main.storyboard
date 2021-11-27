@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lj3-Nt-gEN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
@@ -9,17 +9,54 @@
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <scene sceneID="m9E-mu-eCw">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoodSelectorLab" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                <viewController id="lj3-Nt-gEN" customClass="ViewController" customModule="MoodSelectorLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Yn9-IF-tHB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W4l-ra-cBJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nP6-eF-Kee">
+                                <rect key="frame" x="30" y="174" width="354" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cvh-YM-C0h" customClass="MoodSelector" customModule="MoodSelectorLab" customModuleProvider="target">
+                                <rect key="frame" x="10" y="723" width="394" height="139"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="139" id="cOT-Ab-qaD"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="moodChange:" destination="lj3-Nt-gEN" eventType="valueChanged" id="NHR-LZ-QGd"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="t0r-EC-sZH"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="W4l-ra-cBJ" firstAttribute="leading" secondItem="t0r-EC-sZH" secondAttribute="leading" id="4pR-ou-Uye"/>
+                            <constraint firstItem="W4l-ra-cBJ" firstAttribute="top" secondItem="Yn9-IF-tHB" secondAttribute="top" id="9Lz-49-cFZ"/>
+                            <constraint firstItem="nP6-eF-Kee" firstAttribute="leading" secondItem="t0r-EC-sZH" secondAttribute="leading" constant="30" id="HSi-oK-22b"/>
+                            <constraint firstItem="nP6-eF-Kee" firstAttribute="top" secondItem="t0r-EC-sZH" secondAttribute="top" constant="130" id="Pq4-2G-gxF"/>
+                            <constraint firstItem="t0r-EC-sZH" firstAttribute="trailing" secondItem="Cvh-YM-C0h" secondAttribute="trailing" constant="10" id="Qwb-Rm-WMk"/>
+                            <constraint firstItem="W4l-ra-cBJ" firstAttribute="trailing" secondItem="t0r-EC-sZH" secondAttribute="trailing" id="ZZf-17-F9V"/>
+                            <constraint firstItem="Cvh-YM-C0h" firstAttribute="leading" secondItem="t0r-EC-sZH" secondAttribute="leading" constant="10" id="edu-3x-ebQ"/>
+                            <constraint firstItem="t0r-EC-sZH" firstAttribute="trailing" secondItem="nP6-eF-Kee" secondAttribute="trailing" constant="30" id="los-JH-9Md"/>
+                            <constraint firstAttribute="bottom" secondItem="W4l-ra-cBJ" secondAttribute="bottom" id="rp6-9a-joX"/>
+                            <constraint firstItem="t0r-EC-sZH" firstAttribute="bottom" secondItem="Cvh-YM-C0h" secondAttribute="bottom" id="xsK-yF-4qR"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="W4l-ra-cBJ" id="Xyh-yb-S3W"/>
+                        <outlet property="labelView" destination="nP6-eF-Kee" id="c9S-uL-qGx"/>
+                        <outlet property="moodSelector" destination="Cvh-YM-C0h" id="jdn-Tx-012"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VR9-Ep-AAW" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="109.82142857142857"/>
         </scene>
