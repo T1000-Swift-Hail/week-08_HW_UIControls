@@ -15,9 +15,44 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y6i-Fo-h54">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jXX-Lo-Tzw">
+                                <rect key="frame" x="20" y="128" width="374" height="216"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="31"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5VN-1i-sQA" customClass="MoodSelector" customModule="MoodSelectorLab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="505" width="374" height="320"/>
+                                <connections>
+                                    <action selector="Changed:" destination="BYZ-38-t0r" eventType="valueChanged" id="J4p-l2-s8h"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jXX-Lo-Tzw" secondAttribute="trailing" constant="20" id="2JS-XC-apM"/>
+                            <constraint firstItem="Y6i-Fo-h54" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="6EZ-PB-xjY"/>
+                            <constraint firstItem="Y6i-Fo-h54" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="8ZI-QL-oC4"/>
+                            <constraint firstItem="5VN-1i-sQA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DPC-5f-4dJ"/>
+                            <constraint firstAttribute="bottom" secondItem="Y6i-Fo-h54" secondAttribute="bottom" id="IiR-qp-Hcc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="5VN-1i-sQA" secondAttribute="bottom" constant="37" id="PP6-R2-zlo"/>
+                            <constraint firstItem="5VN-1i-sQA" firstAttribute="top" secondItem="jXX-Lo-Tzw" secondAttribute="bottom" constant="340" id="XZy-4n-RA5"/>
+                            <constraint firstItem="jXX-Lo-Tzw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="84" id="fw4-jD-ZTD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="5VN-1i-sQA" secondAttribute="trailing" constant="20" id="lka-CI-36h"/>
+                            <constraint firstItem="Y6i-Fo-h54" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="nyf-gU-z29"/>
+                            <constraint firstItem="jXX-Lo-Tzw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="z6V-4Z-p6q"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imagViwe" destination="Y6i-Fo-h54" id="7Db-mN-2Ah"/>
+                        <outlet property="label" destination="jXX-Lo-Tzw" id="jOb-RD-Rf9"/>
+                        <outlet property="moodSelector" destination="5VN-1i-sQA" id="czK-Ig-Adm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
