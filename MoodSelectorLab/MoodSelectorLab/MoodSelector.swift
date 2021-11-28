@@ -19,6 +19,9 @@ enum Mood : String {
 
 class MoodSelector: UIControl {
 
+    @IBAction func view(_ sender: Any) {
+    }
+    
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
