@@ -15,9 +15,45 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qQK-u8-Bep">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KhF-wx-zne">
+                                <rect key="frame" x="56" y="226" width="64" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                                <color key="textColor" systemColor="systemGray6Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BqQ-dU-DyD" customClass="MoodSelector" customModule="MoodSelectorLab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="701" width="374" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="lrm-uZ-0kJ"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="showMood:" destination="BYZ-38-t0r" eventType="valueChanged" id="VFp-6x-qVS"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="KhF-wx-zne" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="56" id="5qp-Ty-8PE"/>
+                            <constraint firstItem="qQK-u8-Bep" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="90F-7i-qgY"/>
+                            <constraint firstItem="BqQ-dU-DyD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="9ih-Tg-5kJ"/>
+                            <constraint firstItem="KhF-wx-zne" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="182" id="ROH-cf-EfA"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BqQ-dU-DyD" secondAttribute="bottom" constant="33" id="dgp-Ej-376"/>
+                            <constraint firstItem="qQK-u8-Bep" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="h1N-6h-1mi"/>
+                            <constraint firstAttribute="bottom" secondItem="qQK-u8-Bep" secondAttribute="bottom" id="n3q-v5-r8e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BqQ-dU-DyD" secondAttribute="trailing" constant="20" id="rd5-I1-0go"/>
+                            <constraint firstItem="qQK-u8-Bep" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="snM-TW-OK1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="qQK-u8-Bep" id="XxV-8w-tYA"/>
+                        <outlet property="moodPosation" destination="KhF-wx-zne" id="aMT-fK-1lE"/>
+                        <outlet property="moodSelect" destination="BqQ-dU-DyD" id="qkq-sN-3rU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -27,6 +63,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
