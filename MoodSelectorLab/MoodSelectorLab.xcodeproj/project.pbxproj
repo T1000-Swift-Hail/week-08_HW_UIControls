@@ -64,11 +64,11 @@
 				D10D5B1A274F64FE00C56609 /* SceneDelegate.swift */,
 				D10D5B1C274F64FE00C56609 /* ViewController.swift */,
 				D10D5B2C274F661D00C56609 /* MoodSelector.swift */,
+				D10D5B2E274F7A4E00C56609 /* MoodPage.swift */,
 				D10D5B1E274F64FE00C56609 /* Main.storyboard */,
 				D10D5B21274F650200C56609 /* Assets.xcassets */,
 				D10D5B23274F650200C56609 /* LaunchScreen.storyboard */,
 				D10D5B26274F650200C56609 /* Info.plist */,
-				D10D5B2E274F7A4E00C56609 /* MoodPage.swift */,
 			);
 			path = MoodSelectorLab;
 			sourceTree = "<group>";
