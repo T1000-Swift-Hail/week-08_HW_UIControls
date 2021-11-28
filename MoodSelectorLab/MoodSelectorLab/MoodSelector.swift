@@ -49,7 +49,7 @@ class MoodSelector: UIControl {
         
         let newView = UIView()
         newView.backgroundColor = UIColor(named: "happy")
-        
+//        newView.backgroundColor = UIColor(named: "sad")
         return newView
     }()
     
@@ -88,7 +88,7 @@ class MoodSelector: UIControl {
         backView.translatesAutoresizingMaskIntoConstraints = false
         
         
-        //moodStackView.backgroundColor  = UIColor.blue
+//        moodStackView.backgroundColor  = UIColor.blue
         configureButtons()
         
         
@@ -135,7 +135,8 @@ class MoodSelector: UIControl {
     @objc func buttonTapped(_ sender : UIButton){
         
         selectedMoodIndex = moodStackView.subviews.firstIndex(of: sender) ?? 0
-        
+        backView.transform.tx = moodStackView.subviews[selectedMoodIndex].frame.origin.x
+  
         sendActions(for: .valueChanged)
     }
 

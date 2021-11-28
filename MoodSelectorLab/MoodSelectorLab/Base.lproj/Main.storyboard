@@ -15,9 +15,40 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qb0-hA-2nY">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5T-Te-5UV">
+                                <rect key="frame" x="30" y="144" width="73.5" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleAspectFit" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rvj-xG-KmT" customClass="MoodSelector" customModule="MoodSelectorLab" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="747" width="414" height="115"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="moodsChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="ppJ-TT-oNu"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qb0-hA-2nY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0Zd-of-FPJ"/>
+                            <constraint firstItem="qb0-hA-2nY" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Dg4-O3-u6z"/>
+                            <constraint firstItem="i5T-Te-5UV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="KOM-6B-4Vu"/>
+                            <constraint firstItem="qb0-hA-2nY" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="aJM-3D-aCq"/>
+                            <constraint firstAttribute="bottom" secondItem="qb0-hA-2nY" secondAttribute="bottom" id="bNT-zn-45T"/>
+                            <constraint firstItem="i5T-Te-5UV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="wiR-fz-Eb5"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="moodImageView" destination="qb0-hA-2nY" id="Bmm-dl-ZxW"/>
+                        <outlet property="moodLabel" destination="i5T-Te-5UV" id="nXh-HL-Gtf"/>
+                        <outlet property="moodSelector" destination="Rvj-xG-KmT" id="utJ-jl-9zX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
