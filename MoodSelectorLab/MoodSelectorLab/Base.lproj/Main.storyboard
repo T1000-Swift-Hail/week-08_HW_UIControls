@@ -15,9 +15,48 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pNR-NU-lg5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <accessibility key="accessibilityConfiguration" identifier="pagesImages">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.55000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-k8-6A4">
+                                <rect key="frame" x="20" y="158" width="374" height="37"/>
+                                <accessibility key="accessibilityConfiguration" identifier="lblDescription"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pOt-7p-KL2" customClass="MoodSelector" customModule="MoodSelectorLab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="683" width="374" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="moodStack">
+                                    <bool key="isElement" value="YES"/>
+                                </accessibility>
+                                <connections>
+                                    <action selector="viewFaceAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="fBU-cT-DcH"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Tea-k8-6A4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="114" id="3Q7-LA-Hqq"/>
+                            <constraint firstItem="pNR-NU-lg5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="Oa7-GR-rce"/>
+                            <constraint firstItem="Tea-k8-6A4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="bRX-e1-M2i"/>
+                            <constraint firstItem="pNR-NU-lg5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eVf-RY-9Yb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pNR-NU-lg5" secondAttribute="trailing" id="p0D-FH-oxp"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pNR-NU-lg5" secondAttribute="bottom" constant="-34" id="piR-7j-elo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tea-k8-6A4" secondAttribute="trailing" constant="20" id="zeK-7Q-RF6"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lblDescription" destination="Tea-k8-6A4" id="2bt-G0-GTI"/>
+                        <outlet property="moodStack" destination="pOt-7p-KL2" id="Nds-we-EY4"/>
+                        <outlet property="pagesImages" destination="pNR-NU-lg5" id="Dw6-hv-An7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
