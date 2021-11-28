@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "sad.png",
+      "filename" : "sleepy.jpeg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "sad-1.png",
+      "filename" : "sleepy-1.jpeg",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "sad-2.png",
+      "filename" : "sleepy-2.jpeg",
       "idiom" : "universal",
       "scale" : "3x"
     }
