@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,9 +15,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Yd5-NP-6Sh">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ALB-pp-H25">
+                                <rect key="frame" x="20" y="121" width="374" height="82"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K0a-bH-919" userLabel="mood Stack" customClass="MoodSelector" customModule="MoodSelectorLab" customModuleProvider="target">
+                                <rect key="frame" x="20" y="765" width="374" height="97"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="97" id="jlB-Bt-yXu"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeView:" destination="BYZ-38-t0r" eventType="valueChanged" id="Y5C-P2-cjV"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K0a-bH-919" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0h1-lI-dYQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yd5-NP-6Sh" secondAttribute="bottom" constant="-34" id="AMU-YN-GS8"/>
+                            <constraint firstItem="ALB-pp-H25" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BHL-PF-kzT"/>
+                            <constraint firstItem="Yd5-NP-6Sh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="GcH-hh-u9b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yd5-NP-6Sh" secondAttribute="trailing" id="O9n-sg-LA7"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="K0a-bH-919" secondAttribute="trailing" constant="20" id="QhG-F3-8Yq"/>
+                            <constraint firstItem="K0a-bH-919" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UG9-7t-huR"/>
+                            <constraint firstItem="Yd5-NP-6Sh" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ay7-MV-E8c"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ALB-pp-H25" secondAttribute="trailing" constant="20" id="cui-mw-1wW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ALB-pp-H25" secondAttribute="bottom" constant="659" id="e94-MT-Rhq"/>
+                            <constraint firstItem="ALB-pp-H25" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="77" id="l6m-Zl-Hzw"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageView" destination="Yd5-NP-6Sh" id="N1q-nz-vdM"/>
+                        <outlet property="labelView" destination="ALB-pp-H25" id="frd-yi-GZD"/>
+                        <outlet property="moodStack" destination="K0a-bH-919" id="5J5-0C-htF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
