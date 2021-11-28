@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,9 +15,47 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0fC-ve-NXe">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="jef-zG-8LN">
+                                <rect key="frame" x="20" y="143" width="374" height="51"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <color key="textColor" red="0.91241681575775146" green="0.77901273965835571" blue="0.37257331609725952" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DBh-hz-57H" customClass="MoodSelector" customModule="MoodSelectorLab" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="749" width="414" height="147"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="1cV-qB-rxc"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="changeP:" destination="BYZ-38-t0r" eventType="valueChanged" id="GV3-5e-a1h"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jef-zG-8LN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0uB-V9-dqx"/>
+                            <constraint firstItem="jef-zG-8LN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="99" id="5Th-aK-2Tm"/>
+                            <constraint firstItem="DBh-hz-57H" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="7j0-S0-Yg4"/>
+                            <constraint firstAttribute="bottom" secondItem="0fC-ve-NXe" secondAttribute="bottom" id="7oP-X0-XO2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jef-zG-8LN" secondAttribute="bottom" constant="668" id="BP2-NR-piE"/>
+                            <constraint firstItem="DBh-hz-57H" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Oay-VB-sXf"/>
+                            <constraint firstItem="0fC-ve-NXe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Par-hE-WRR"/>
+                            <constraint firstItem="0fC-ve-NXe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="gHG-db-VPS"/>
+                            <constraint firstAttribute="bottom" secondItem="DBh-hz-57H" secondAttribute="bottom" id="rBq-SU-EgK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jef-zG-8LN" secondAttribute="trailing" constant="20" id="tkn-Wc-Nex"/>
+                            <constraint firstItem="0fC-ve-NXe" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="tme-az-ths"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imagePage" destination="0fC-ve-NXe" id="HIr-Vt-L6O"/>
+                        <outlet property="lablePage" destination="jef-zG-8LN" id="2gI-wu-FCM"/>
+                        <outlet property="moodChange" destination="DBh-hz-57H" id="QpY-M3-Ih2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
