@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var moodStack: MoodSelector!
     
     
-    let pagesView = [MoodPage(description: "Be Happy Don't worry", imageName: "images-2"), MoodPage(description: "Life is Short Don't lose it ", imageName: "download-1"),   MoodPage(description: "Angry is Not Good For Your Healthy ", imageName:"images"), MoodPage(description: "Make Fone Goo With Yo", imageName: "images-1")]
+    let pagesView = [MoodPage(description: "Be Happy Don't worry", imageName: "images-2"), MoodPage(description: "Life is Short Don't lose it ", imageName: "download-1"),   MoodPage(description: "Angry is Not Good For Your Healthy ", imageName:"images"), MoodPage(description: "Make Fone Goo With You Frinds ", imageName: "images-1")]
 
     
     
